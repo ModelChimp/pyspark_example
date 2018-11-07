@@ -42,7 +42,7 @@ embarkEncoder = OneHotEncoder(inputCol="indexedEmbarked", outputCol="embarkedVec
 assembler = VectorAssembler(inputCols=["Pclass","sexVec","Age","SibSp","Fare","embarkedVec"],outputCol="features")
 
 # MODELCHIMP Tracking Code
-tracker = Tracker('<PROJECT KEY>', host='demo.modelchimp.com', experiment_name='MNIST Classification') #MODELCHIMP
+tracker = Tracker('<PROJECT KEY>', host='localhost:8000', experiment_name='MNIST Classification') #MODELCHIMP
 
 # Train a RandomForest model.
 param = {
